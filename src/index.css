@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: #05070d;
+  color: #f4f7ff;
+  font-family: 'Inter', sans-serif;
+}
+
+::selection {
+  background: rgba(59, 100, 255, 0.35);
+}
+
+.perspective-container {
+  perspective: 1400px;
+}
+
+.tilt-card {
+  transform-style: preserve-3d;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tilt-card {
+    transition: none;
+  }
+}
